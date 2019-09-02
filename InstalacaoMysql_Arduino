@@ -1,0 +1,29 @@
+    ###### ARDUINO ###### 
+
+ sudo apt-get install ubuntu-make
+ umake ide arduino
+ sudo usermod -a -G dialout ricardo.vilela
+
+
+   ##### 
+
+ senha: K21PP48%#na84
+
+
+
+ sudo apt-get install -y mysql-server-5.7 mysql-client
+
+ sudo mysql_secure_installation
+
+ uninstall plugin validate_password;
+
+ sudo mysql -u root -p
+
+ CREATE USER 'itbam'@'localhost' IDENTIFIED BY 'K21PP48%#na84';
+
+ GRANT ALL PRIVILEGES ON * . * TO 'itbam'@'localhost';
+
+ FLUSH PRIVILEGES;
+
+ \q
+
