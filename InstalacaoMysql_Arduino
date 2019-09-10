@@ -83,4 +83,11 @@ sudo apt upgrade
 
 
 
+
+
+DELETE FROM mysql.user WHERE user='itbam' and host='localhost';
+
+FLUSH PRIVILEGES;
+
+
 FIM :)
