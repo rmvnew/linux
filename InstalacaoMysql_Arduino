@@ -1,5 +1,6 @@
     ###### ARDUINO ###### 
 
+ sudo apt-get install arduino
  sudo apt-get install ubuntu-make
  umake ide arduino
  sudo usermod -a -G dialout ricardo.vilela
@@ -7,23 +8,79 @@
 
    ##### 
 
- senha: K21PP48%#na84
+ INSTALAÇÃO DO banco de dados E SUA CONFIGURAÇÃO
 
+1 - passo:
+sudo apt install apache2
 
+2 - passo:
+ sudo apt install mysql-server
 
- sudo apt-get install -y mysql-server-5.7 mysql-client
-
+3 - passo:
  sudo mysql_secure_installation
 
+ /*#################################
+ Obs. aqui aceite o primeiro item para poder 
+ criar uma senha para o root.
+ De preferencia coloque senha "12345"
+ logo em seguida configure delete usuario anonino
+ confirme acesso remoto, delete base de dados teste e por ai vai.
+*/#################################
+
+4 - passo:
+ sudo mysql -u root -p
+ com esse comando entramos no console do mysql pelo terminal =);
+
+5 - passo:
  uninstall plugin validate_password;
 
- sudo mysql -u root -p
+/*#################################
+precisamos remover esse plugin, pois ele não permite
+configurar uma senha fraca.
+/*#################################
 
- CREATE USER 'itbam'@'localhost' IDENTIFIED BY 'K21PP48%#na84';
+6 - passo:
+ CREATE USER 'itbam'@'localhost' IDENTIFIED BY '12345';
 
+7 - passo:
  GRANT ALL PRIVILEGES ON * . * TO 'itbam'@'localhost';
 
+8 - passo:
  FLUSH PRIVILEGES;
 
- \q
+9 - passo:
+\q
 
+10 - passo:
+sudo apt install phpmyadmin
+/*#################################
+Durante essa instalação ele ira pedir uma senha
+use a senha do usuario "itbam" que criamos a pouco
+"12345"
+Obs. coloque a mesma senha nos 2 campos que irão aparecer
+/*#################################
+
+11 - passo:
+sudo apt-get purge openjdk*
+
+12 - passo:
+sudo add-apt-repository ppa:linuxuprising/java
+Obs. Ao carregar as informações no terminal confirme com enter
+
+13 - passo:
+sudo apt update
+
+14 - passo:
+sudo apt install oracle-java12-installer
+
+15 - passo: 
+sudo apt install ubuntu-restricted-extras
+
+16 - passo:
+sudo apt upgrade
+
+
+
+
+
+FIM :)
