@@ -37,7 +37,7 @@ sudo apt install apache2
 /*#################################
 precisamos remover esse plugin, pois ele não permite
 configurar uma senha fraca.
-/*#################################
+*/#################################
 
 6 - passo:
  CREATE USER 'itbam'@'localhost' IDENTIFIED BY '12345';
@@ -58,7 +58,7 @@ Durante essa instalação ele ira pedir uma senha
 use a senha do usuario "itbam" que criamos a pouco
 "12345"
 Obs. coloque a mesma senha nos 2 campos que irão aparecer
-/*#################################
+*/#################################
 
 11 - passo:
 sudo apt-get purge openjdk*
