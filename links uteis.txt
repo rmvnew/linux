@@ -1,3 +1,9 @@
 tabela hash
 
 https://www.ime.usp.br/~pf/mac0122-2002/aulas/hashing.html
+
+
+sudo apt-get install arduino
+ sudo apt-get install ubuntu-make
+ umake ide arduino
+ sudo usermod -a -G dialout itbam
