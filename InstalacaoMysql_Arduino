@@ -79,11 +79,45 @@ sudo apt install ubuntu-restricted-extras
 16 - passo:
 sudo apt upgrade
 
+/*
+########################################################  
+comandos para gerar um arquivo .sh na area de trabalho
+*/
+
+Obs. para funcionar a dist deve estar na área de trabalho.
+
+abra o terminal na area de trabalho
+
+17 - passo:
+
+touch sistema.sh
 
 
+abra o arquivo com o editor disponivel caso não saiba melhor instalar um 
+por exemplo o pluma.
 
+sudo apt install pluma
 
+em seguida abra o ducumento com o pluma
 
+sudo pluma sistema.sh
+
+18 - passo:
+agora cole dentro do documento os comandos abaixo:
+
+------------------------------------------------
+#/bin/bash
+
+java -jar /home/itbam/dist/bateria.jar
+------------------------------------------------
+
+salve e feche o arquivo.
+
+19 - passo:
+atribuir permissao de execucao do arquivo:
+sudo chmod -R 777 sistema.sh
+
+pronto!!
 
 DELETE FROM mysql.user WHERE user='itbam' and host='localhost';
 

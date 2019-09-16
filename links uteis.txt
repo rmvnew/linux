@@ -1,0 +1,3 @@
+tabela hash
+
+https://www.ime.usp.br/~pf/mac0122-2002/aulas/hashing.html
