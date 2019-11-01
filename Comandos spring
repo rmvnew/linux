@@ -1,0 +1,80 @@
+
+Instalar o docker
+
+Instalar docker-compose
+
+Instalar o postgree no docker
+
+
+Acessar https://start.spring.io/
+
+
+
+Escolher as opções para pre-configurar o projeto
+
+web,JPA,Postgres,Lombok
+
+
+Baixar e descompactar
+
+Abrir o intelij acessar a opção abrir e procurar a pasta do projeto pre-configurado que foi gerado pelo spring initializer.
+
+Criar um arquivo na pasta raiz do projeto com o nome (docker-compose.yml) e colar o seguinte script dentro dela
+
+
+##########################
+
+version: "3"
+services:
+  tad:
+    image: postgres
+    container_name: "postgres" 
+    environment:
+      - POSTGRES_DB=aulas2
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=123456
+      - TZ=GMT
+    volumes:
+      - "./data/postgres:/var/lib/postgresql/data"
+    ports:
+      - 5432:5432
+
+#############################
+
+Depois acessar a o arquivo aplication.properties que esta na pasta resources. colar este script nele
+
+
+############################
+
+server.port = 8090 //aqui deve ser configurado apenas em casos de conflito de portas.
+
+spring.datasource.url= jdbc:postgresql://localhost:5432/aulas2
+spring.datasource.username=postgres
+spring.datasource.password=123456
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.database-platform = org.hibernate.dialect.PostgreSQL94Dialect
+
+############################
+
+Após realizar as configurações iniciais levantar o container
+
+root# docker-compose up -d 
+
+
+*********************************************************
+
+Desenvolvimento.
+
+#Camadas
+
+	Model
+	Services
+	Controller
+	repositories
+
+
+
+
+
+
