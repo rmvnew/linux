@@ -1,0 +1,15 @@
+version: "3"
+services:
+  tad:
+    image: rabbitmq-mes
+    container_name: "RabbitMq-MES"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
+    
+    volumes:
+      - /home/ricardo.vilela/docker:/var/lib/rabbitmq/mnesia
+
+    ports:
+    - "15672:15672"
+    - "5672:5672"
