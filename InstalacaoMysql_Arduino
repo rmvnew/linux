@@ -30,7 +30,10 @@ sudo apt install apache2
  com esse comando entramos no console do mysql pelo terminal =);
 
 5 - passo:
- uninstall plugin validate_password;
+
+ >>|Deprecated|<< uninstall plugin validate_password; >>|Deprecated|<<
+
+ UNINSTALL COMPONENT 'file://component_validate_password';
 
 /*#################################
 precisamos remover esse plugin, pois ele não permite
