@@ -1,10 +1,27 @@
-    ###### ARDUINO ###### 
+   
+
+ ###### ARDUINO ###### 
 
  sudo apt-get install arduino
  sudo usermod -a -G dialout itbam
 
 
+
+REMOVER MYSQL DO LINUX
+
+sudo apt-get remove --purge mysql-server
+sudo apt-get remove --purge phpmyadmin 
+sudo /etc/init.d/mysql stop
+sudo apt-get remove --purge mysql-common
+sudo rm -rf /var/lib/mysql
+sudo apt-get autoremove --purge
+sudo apt-get autoclean
+sudo apt-get clean
+
+
    ##### 
+
+
 
  INSTALAÇÃO DO banco de dados E SUA CONFIGURAÇÃO
 
