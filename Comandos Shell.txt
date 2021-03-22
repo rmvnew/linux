@@ -1,0 +1,4 @@
+find /home/$USER/ -iname "*.jpg" -exec mv {} /meudir \;
+
+
+find -iname "*.sh" -exec ls -l {} \; 
