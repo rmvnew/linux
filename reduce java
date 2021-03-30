@@ -1,0 +1,9 @@
+ prod.forEach(product ->{
+            product.setAmount(product.getPrice()*product.getQuantity());
+            System.out.println(product);
+        });
+
+        double res = prod.stream().mapToDouble(value -> value.getAmount()).reduce(Double::sum).getAsDouble();
+
+        System.out.println(NumberFormat.getCurrencyInstance().format(res));
+

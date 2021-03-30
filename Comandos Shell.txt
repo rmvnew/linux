@@ -1,4 +1,6 @@
 find /home/$USER/ -iname "*.jpg" -exec mv {} /meudir \;
+find /home/$USER/Downloads/ -iname "*.mp4" -exec mv {} ./filmes \;
+find . -size -800M -exec mv {} ./animacao \;
 
 
 find -iname "*.sh" -exec ls -l {} \; 

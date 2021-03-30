@@ -1,0 +1,6 @@
+node init
+nodemon
+express
+ejs
+npm install --save sequelize
+npm install --save mysql2

@@ -1,0 +1,6 @@
+1 - npx create-react-app nome-projeto
+
+cd /nome-projeto
+
+2 - npm i react-router-dom
+
