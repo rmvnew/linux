@@ -1,4 +1,12 @@
- prod.forEach(product ->{
+List<Product> prod = new ArrayList<>();
+        prod.add(new Product(1,"Xbox", 2000.00,15,0.0));
+        prod.add(new Product(2,"Xbox Serie X", 4500.00,55,0.0));
+        prod.add(new Product(3,"TV 65", 6000.00,7,0.0));
+        prod.add(new Product(4,"Monitor Gamer", 1500.00,5,0.0));
+        prod.add(new Product(5,"Cadeira Gamer", 2000.00,35,0.0)); 
+
+
+prod.forEach(product ->{
             product.setAmount(product.getPrice()*product.getQuantity());
             System.out.println(product);
         });
