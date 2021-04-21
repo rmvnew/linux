@@ -4,8 +4,10 @@ npm install --save sequelize
 npm install --save mysql2
 npm install --save body-parser????
 npm install --save ejs
+npm install --save slugify
 
 
 npm install -g nodemon (global)
 npm install --save-dev nodemon (dependencia)
+https://www.tiny.cloud/get-tiny/self-hosted/
 

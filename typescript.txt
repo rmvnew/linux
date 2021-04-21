@@ -1,0 +1,8 @@
+tsc --init
+
+sudo npm i -g typescript
+
+npm init -y
+
+npm i -s live-server
+

@@ -1,0 +1,26 @@
+db_user
+RSPBnGoTCZ3WmNbv
+
+
+sudo service mongod start
+sudo service mongod status
+
+mongo
+mongo --quiet
+show dbs;
+use demoDatabase;
+
+db.createCollection("contacts");
+{"ok":1}
+
+db.dropDatabase();
+
+npm install --save @nestjs/mongoose mongoose
+
+
+
+db.createUser({
+    user: "rmvnew",
+    pwd: "123456",
+    roles: ["readWrite","dbAdmin"]
+});
